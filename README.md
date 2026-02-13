@@ -1,8 +1,8 @@
 
 ### <div align="center"> LUVE : Latent-Cascaded Ultra-High-Resolution Video Generation with Dual Frequency Experts <div> 
 <div align="center">
-  <a href="https://nju-pcalab.github.io/projects//UltraHR-100K"><img src="https://img.shields.io/static/v1?label=LUVE&message=Project&color=purple"></a> &ensp;
-  <a href="https://arxiv.org/abs/2510.20661"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv&color=red&logo=arxiv"></a> &ensp;
+  <a href="https://unicornanrocinu.github.io/LUVE_web/"><img src="https://img.shields.io/static/v1?label=LUVE&message=Project&color=purple"></a> &ensp;
+  <a href="https://arxiv.org/pdf/2602.11564"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv&color=red&logo=arxiv"></a> &ensp;
   <a href="https://huggingface.co/datasets/zhihefang/UltraHR-100K"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=yellow"></a> &ensp;
 </div>
 
