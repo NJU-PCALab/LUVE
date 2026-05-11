@@ -1,0 +1,78 @@
+train_dataset:
+  dataset:
+    name: video-folder
+    args:
+      hr_path: ./dataset/HR_latent/ # TODO
+      lr_path: ./dataset/LR_latent/ # TODO
+      gt_path: ./dataset/video/ # TODO
+      scales:
+      - 1.5
+      - 2
+      - 3
+  wrapper:
+    name: sr-explicit-paired
+    args:
+      inp_size: 64
+      augment: []
+      max_frames: 11
+  num_workers: 0
+  batch_size: 2
+sd_ckpt: Wan2.1_VAE.pth # TODO
+loss:
+  alpha_rgb: 1.0
+  alpha_frame: 1.0
+  h_patch: 24
+  w_patch: 24
+model:
+  name: liif
+  args:
+    feat_unfold: true
+    local_ensemble: false
+    encoder_spec:
+      name: vrt
+      args:
+        upscale: 1
+        in_chans: 16
+        out_chans: 120
+        img_size: [6, 64, 64]
+        pa_frames: 0
+        use_checkpoint_attn: true
+        use_checkpoint_ffn: true
+    imnet_spec:
+      name: mlp
+      args:
+        out_dim: 16
+        hidden_list:
+        - 512
+        - 512
+        - 256
+        - 256
+    decoder_spec:
+      name: vrt
+      args:
+        upscale: 1
+        in_chans: 16
+        out_chans: 24
+        depths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        pa_frames: 0
+        embed_dims: [24, 24, 24, 24, 24, 24, 24, 48, 48, 48]
+        use_checkpoint_attn: true
+        use_checkpoint_ffn: true
+optimizer:
+  name: adam
+  args:
+    lr: 0.0002
+lr_scheduler:
+  name: CosineAnnealingLR_Restart
+  args:
+    T_period:
+    - 400000
+    restarts:
+    - 400000
+    weights:
+    - 1
+    eta_min: 1.0e-07
+iter_max: 400000
+iter_print: 1000
+iter_save: 2000
+seed: 0

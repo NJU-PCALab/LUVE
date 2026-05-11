@@ -1,0 +1,35 @@
+model:
+  name: liif
+  args:
+    feat_unfold: true
+    local_ensemble: false
+    encoder_spec:
+      name: vrt
+      args:
+        upscale: 1
+        in_chans: 16
+        out_chans: 120
+        img_size: [6, 64, 64]
+        pa_frames: 0
+        use_checkpoint_attn: true
+        use_checkpoint_ffn: true
+    imnet_spec:
+      name: mlp
+      args:
+        out_dim: 16
+        hidden_list:
+        - 512
+        - 512
+        - 256
+        - 256
+    decoder_spec:
+      name: vrt
+      args:
+        upscale: 1
+        in_chans: 16
+        out_chans: 24
+        depths: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        pa_frames: 0
+        embed_dims: [24, 24, 24, 24, 24, 24, 24, 48, 48, 48]
+        use_checkpoint_attn: true
+        use_checkpoint_ffn: true
