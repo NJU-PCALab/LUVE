@@ -1,5 +1,5 @@
 
-### <div align="center"> (ICML'2025) LUVE : Latent-Cascaded Ultra-High-Resolution Video Generation with Dual Frequency Experts <div> 
+### <div align="center"> (ICML'2026) LUVE : Latent-Cascaded Ultra-High-Resolution Video Generation with Dual Frequency Experts <div> 
 <div align="center">
   <a href="https://unicornanrocinu.github.io/LUVE_web/"><img src="https://img.shields.io/static/v1?label=LUVE&message=Project&color=purple"></a> &ensp;
   <a href="https://arxiv.org/pdf/2602.11564"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv&color=red&logo=arxiv"></a> &ensp;
