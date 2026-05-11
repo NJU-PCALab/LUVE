@@ -22,7 +22,7 @@ def make_coord_3d(shape, ranges=None, flatten=True, device='cpu'):
         ret = ret.view(-1, ret.shape[-1])  # (D*H*W,3)
     return ret
 
-def latent_upsamplar(model, latent, H_target, W_target):
+def latent_upsampler(model, latent, H_target, W_target):
     model.eval()
     device = next(model.parameters()).device
     latent = latent.unsqueeze(0).to(device)
