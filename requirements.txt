@@ -1,0 +1,18 @@
+# Linux / NVIDIA CUDA. Run from the directory containing pyproject.toml.
+torch==2.6.0
+einops==0.8.0
+numpy==1.26.4
+Pillow==10.4.0
+safetensors==0.4.5
+transformers==4.46.2
+tokenizers==0.20.3
+sentencepiece==0.2.0
+ftfy==6.2.0
+packaging==24.1
+regex==2024.9.11
+PyYAML==6.0.2
+imageio==2.34.1
+imageio-ffmpeg==0.4.9
+tqdm==4.66.4
+typing_extensions==4.12.2
+.
