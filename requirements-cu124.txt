@@ -1,0 +1,6 @@
+# Supported target: CPython 3.10, Linux x86_64, NVIDIA CUDA 12.4 runtime.
+# Official PyTorch wheel, scoped to torch only; no additional package index.
+# All other dependencies use the normal package index configured for pip.
+# Run from the source directory containing pyproject.toml.
+torch @ https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp310-cp310-linux_x86_64.whl
+-r requirements.txt
